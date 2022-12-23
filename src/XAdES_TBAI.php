@@ -181,9 +181,7 @@ class XAdES_TBAI extends XAdES
 				$identifier,
 				null,
 				new SigPolicyHash($algorithm, $digest),
-				new SigPolicyQualifiers(
-                    new SigPolicyQualifier("<xades:SPURI>https://www.batuz.eus/fitxategiak/batuz/ticketbai/sinadura_elektronikoaren_zehaztapenak_especificaciones_de_la_firma_electronica_v1_0.pdf</xades:SPURI>")
-                )
+				null
 			)
 		);
 
