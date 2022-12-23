@@ -172,18 +172,12 @@ class XAdES_TBAI extends XAdES
 		$identifier = "https://www.batuz.eus/fitxategiak/batuz/ticketbai/sinadura_elektronikoaren_zehaztapenak_especificaciones_de_la_firma_electronica_v1_0.pdf";
 		$digest = "Quzn98x3PMbSHwbUzaj5f5KOpiH0u8bvmwbbbNkO9Es=";
 		$algorithm = XMLSecurityDSig::SHA256;
-		$transforms->parent = null;
-
-		// Use the traverse function to set the prefix to null on this an all descendents
-		$transforms->traverse(function($node) {
-			$node->prefix = null;
-		});
 
 		// Create the policy object
 		$spi = new SignaturePolicyIdentifier(
 			new SignaturePolicyId(
 				$identifier,
-				$transforms,
+				null,
 				new SigPolicyHash($algorithm, $digest),
 				null // No qualifiers
 			)
