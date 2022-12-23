@@ -1,5 +1,5 @@
 {
-  "name": "lyquidity/xml-signer",
+  "name": "sportuondo/xml-signer",
   "description": "A PHP to create and verify XAdES signature",
   "license": "GPL-3.0-only",
   "keywords": 
@@ -14,7 +14,7 @@
     "commitment type",
     "counter signature"
   ],
-  "homepage": "https://github.com/bseddon/xml-signer",
+  "homepage": "https://github.com/sportuondo/xml-signer.git",
   "autoload": 
   { 
 	  "files": ["./autoload.php"] 
