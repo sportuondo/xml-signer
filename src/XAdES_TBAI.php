@@ -20,6 +20,7 @@ use lyquidity\xmldsig\xml\Signature;
 use lyquidity\xmldsig\xml\SignaturePolicyId;
 use lyquidity\xmldsig\xml\SignaturePolicyIdentifier;
 use lyquidity\xmldsig\xml\SignedDataObjectProperties;
+use lyquidity\xmldsig\xml\SigPolicyQualifier;
 use lyquidity\xmldsig\xml\SignedProperties;
 use lyquidity\xmldsig\xml\SigPolicyHash;
 use lyquidity\xmldsig\xml\Transforms;
@@ -179,7 +180,7 @@ class XAdES_TBAI extends XAdES
 				$identifier,
 				null,
 				new SigPolicyHash($algorithm, $digest),
-				null // No qualifiers
+				new SigPolicyQualifier("<xades:SPURI>https://www.batuz.eus/fitxategiak/batuz/ticketbai/sinadura_elektronikoaren_zehaztapenak_especificaciones_de_la_firma_electronica_v1_0.pdf</xades:SPURI>")
 			)
 		);
 
